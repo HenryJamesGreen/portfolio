@@ -4,7 +4,7 @@
 }
 
 body {
-  margin: 2%;
+  margin: 0% 10%;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   line-height: 1.5;
@@ -66,7 +66,8 @@ a {
 .photo {
   position: relative;
   border: solid black 2px;
-  width: 100%;
+  border-radius: 50%;
+  width: 130%;
   grid-column: 2 / span 1;
   grid-row: 1 / span 2;
   justify-self: end;
@@ -122,12 +123,15 @@ h4,
 h5,
 h6 {
   margin: 0;
+  font-size: 20px;
 }
 
 p {
   margin: 0;
   text-align: justify;
 }
+
+
 
 .picture-grid {
   background-image: url("/assets/images/02-portfolio-1.jpg");
@@ -148,6 +152,7 @@ p {
   width: 90%;
   justify-self: end;
   border: solid aqua 3px;
+  z-index: 1;
 }
 
 .picture-grid3 {
@@ -179,6 +184,23 @@ p {
   border: solid aqua 3px;
 
 }
+
+#heading1 {
+border: 3px solid aqua;
+margin-top: 70%;
+margin-right: 60%;
+background-color: aqua;
+}
+
+#heading2 {
+  border: 3px solid aqua;
+  margin-top: 60%;
+  margin-right: 35%;
+  background-color: aqua;
+}
+
+
+
 
 #contact {
   grid-row: 6;
