@@ -95,6 +95,7 @@ h2 {
 }
 
 
+
 .content {
   grid-column: 3 / span 6;
   margin: 40px 20px 40px 0px;
@@ -143,6 +144,7 @@ p {
   grid-column: 6 / span 3;
   grid-row: 5;
   margin: 5px;
+
 }
 
 #contact {
