@@ -95,6 +95,8 @@ h2 {
 }
 
 
+
+
 .content {
   grid-column: 3 / span 6;
   margin: 40px 20px 40px 0px;
@@ -110,6 +112,7 @@ h6 {
 p {
   margin: 0;
   text-align: justify;
+
 }
 
 .picture-grid {
@@ -143,11 +146,14 @@ p {
   grid-column: 6 / span 3;
   grid-row: 5;
   margin: 5px;
+
 }
 
+
 #contact {
-  grid-row: 6;
+grid-row: 6;
 }
+
 
 .footer {
   display: grid;
