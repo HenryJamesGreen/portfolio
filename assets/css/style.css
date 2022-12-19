@@ -131,22 +131,315 @@ p {
   text-align: justify;
 }
 
+.image-grid {
+  --gap: 16px;
+  --num-cols: 4;
+  --row-height: 200px;
+
+  box-sizing: border-box;
+  padding: var(--gap);
+
+  display: grid;
+  grid-template-columns: repeat(var(--num-cols), 1fr);
+  grid-auto-rows: var(--row-height);
+  gap: var(--gap);
+}
+
+.image1 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-grid :nth-child(1) {
+  grid-column: auto / span 4;
+  grid-row: auto / span 2;
+}
+
+.image-grid :nth-child(2) {
+  grid-column: auto / span 2;
+  grid-row: auto / span 1;
+}
+
+.image-grid :nth-child(3) {
+  grid-column: auto / span 2;
+  grid-row: auto / span 1;
+}
+
+.image-grid :nth-child(4) {
+  grid-column: auto / span 2;
+  grid-row: auto / span 1;
+}
+
+.image-grid :nth-child(5) {
+  grid-column: auto / span 2;
+  grid-row: auto / span 1;
+}
+
+.image-grid-col-2 {
+  grid-column: span 2;
+}
+.image-grid-row-2 {
+  grid-row: span 2;
+}
 
 
-.picture-grid {
-  background-image: url("/assets/images/02-portfolio-1.jpg");
-  grid-column: 3 / span 6;
-  grid-row: 2 / span 2;
-  margin: 0px;
-  width: 90.8%;
-  margin-left: 0px;
-  justify-self: center;
-  border: solid aqua 3px;
+@media screen and (max-width: 1024px) {
+.image-grid {
+  --num-cols: 2;
+  --row-height: 200px;
+}
+
+}
+
+
+/*
+.gridContainer{
+  grid-column-start: 3;
+  grid-row-start: 2;
+  grid-column-end: 9;
+  grid-row-end: 4;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  background-color: #2196F3;
+  grid-template-areas: "photo1 photo1 photo1 photo1"
+  "photo1 photo1 photo1 photo1"
+  "photo2 photo2 photo3 photo3"
+  "photo4 photo4 photo5 photo5";
+  padding: 5px;
+  margin-bottom: auto;
+  }
+*/
+
+ 
+/*
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+*/
+
+/*
+.grid-item1 {
+  grid-area: photo1;
+  padding: 5px;
   
 }
 
+
+.grid-item1>img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
+
+.grid-item2 {
+  grid-area: photo2;
+  padding: 5px;
+}
+.grid-item2>img {
+  object-fit: cover;
+  width: 100%;
+  min-height: 100%;
+}
+
+.grid-item3 {
+  grid-area: photo3;
+  padding: 5px;
+}
+.grid-item3>img {
+  object-fit: cover;
+  width: 100%;
+  min-height: 100%;
+}
+
+.grid-item4 {
+  grid-area: photo4;
+  padding: 5px;
+}
+.grid-item4>img {
+  object-fit: cover;
+  width: 100%;
+  min-height: 100%;
+}
+
+.grid-item5 {
+  grid-area: photo5;
+  padding: 5px;
+}
+.grid-item5>img {
+  object-fit: cover;
+  width: 100%;
+  min-height: 100%;
+}
+
+article {
+  border: blue solid 5px;
+  height: 280px;
+  cursor: pointer;
+
+}
+
+article:hover {
+
+}
+
+.work-title {
+  margin-bottom: 2em;
+  width: 225px;
+  padding: 10px;
+
+}
+.work-title p,
+.work-title h3 {
+  margin: 0;
+}
+
+
+
+
+.page-section2 {
+  grid-column-start: 3;
+  grid-row-start: 3;
+  width: 60vw;
+  grid-column-end: 8;
+  grid-row-end: 6;
+  display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: repeat(4, 1fr);
+  
+}
+
+.righthandgridcontainer {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  width: 60vw;
+  grid-column-end: 4;
+  grid-row-end: 6;
+  display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: repeat(4, 1fr);
+border: solid blue 5px;
+grid-gap: 5px;
+background-color: blue;
+  
+
+}
+article {
+}
+
+.grid-item {
+
+}
+#example1 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+img.trythis {
+  
+    
+}
+
+#example2 {
+  background-image:  url("/assets/images/02-portfolio-2.jpg");
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#example3 {
+  background-image: url("/assets/images/02-portfolio-3.jpg");
+grid-row-start: 3;
+grid-row-end: 4;
+grid-column-start: 3;
+grid-column-end: 5;
+}
+
+#example4 {
+  background-image: url("/assets/images/02-portfolio-4.jpg");
+  grid-row-start: 4;
+  grid-row-end: 5;
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+}
+
+#example5 {
+  background-image: url("/assets/images/02-run-buddy.jpg");
+grid-row-start: 4;
+grid-row-end: 5;
+grid-column-start: 3;
+grid-column-end: 5;
+}
+
+/*
+#item2 {
+grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 3;
+}
+#item3 {
+  grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 3;
+  }
+
+  #item4 {
+    grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 4;
+      grid-row-end: 5;
+    }
+    
+    #item5 {
+      grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 4;
+        grid-row-end: 5;
+      }
+  
+
+/*
+.grid-container {
+  grid-column: 3 / span 6;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows:  1fr 1fr 1fr 1fr;
+
+}
+
+
+#picture1 {
+  background-image: url("/assets/images/02-portfolio-1.jpg");
+  grid-column: 1 / span 4;
+  grid-row: 1 / span 2;
+  margin: 0px;
+  
+  margin-left: 0px;
+  justify-self: center;
+  border: solid aqua 3px;
+}
+
+/*
+#picture2 {
+  background-image: url("/assets/images/02-portfolio-2.jpg"); 
+  grid-column: 2;
+  grid-row: 1;
+}
+
 .picture-grid2 {
-  background-image: url("/assets/images/02-portfolio-2.jpg");
+  background-image: url("/assets/images/02-portfolio-2.jpg"); 
   grid-column: 3 / span 3;
   margin: 5px;
   width: 90%;
@@ -165,6 +458,8 @@ p {
   border: solid aqua 3px;
   
 }
+
+
 .picture-grid4 {
   background-image: url("/assets/images/02-portfolio-4.jpg");
   grid-column: 3 / span 3;
@@ -199,7 +494,44 @@ background-color: aqua;
   background-color: aqua;
 }
 
+/*
 
+.categoryGridArea {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px;
+  cursor: pointer;
+  display: grid;
+  align-content: end;
+}
+
+#categoryGrid {
+  margin: 0px 5%;
+  display: grid;
+  grid-template-rows: 100px 100px 100px 100px;
+  grid-template-columns: repeat 4 (1fr);
+  grid-template-areas:
+    "photo1 photo1 photo1"
+    "photo2 photo2 photo3 photo3"
+    "photo4 photo4 photo5 photo5";
+}
+
+#photo1 {
+  grid-area: photo1;
+}
+
+#photo2 {
+  grid-area: photo2;
+}
+
+#photo3 {
+  grid-area: photo3;
+}
+
+#photo4 {
+  grid-area: photo4;
+}
 
 
 #contact {
@@ -220,6 +552,7 @@ background-color: aqua;
 }
 
 /*
+
 .contact-links {
 display: flex;
   position: absolute;
