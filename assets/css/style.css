@@ -3,10 +3,13 @@
   color: black;
 }
 
+/* Main colour variables in use*/
+
 :root {
   --dark-blue: rgb(1, 13, 57);
   --white: rgb(255, 255, 255);
   --black: rgba(7, 7, 7, 0.8);
+  --very-black: rgb(0, 0, 0);
 }
 
 body {
@@ -15,6 +18,8 @@ body {
     "Lucida Sans", Arial, sans-serif;
   line-height: 1.5;
 }
+
+/* header */
 
 header {
   display: grid;
@@ -59,6 +64,7 @@ a {
   text-decoration: none;
   color: var(--white);
 }
+/* hero, including photo and subtitle*/
 
 .hero-banner {
   display: grid;
@@ -97,6 +103,8 @@ h2 {
   border-radius: 10%;
 }
 
+/* Main content section*/
+
 .page-wrapper {
   display: grid;
   grid-gap: 20pz;
@@ -113,8 +121,10 @@ h2 {
   grid-column: 2;
   border-right: solid var(--black) 2px;
   margin-right: 0px;
-  padding: 5px;
+  padding: 10px;
 }
+
+/* About*/
 
 .content {
   grid-row: 1;
@@ -126,13 +136,20 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0;
   font-size: 20px;
 }
 
 p {
   margin: 0;
   text-align: justify;
+}
+
+/* work */
+
+.new-grid {
+  grid-column: 3 / span 6;
+  margin-top: 300px;
+  justify-self: center;
 }
 
 .image-grid {
@@ -142,9 +159,9 @@ p {
 
   box-sizing: border-box;
   padding: var(--gap);
-  background-color: var(--white);
+  background-color: var(--very-black);
   border: 2px solid var(--black);
-  margin-top: 30px;
+  margin-top: -40%;
 
   display: grid;
   grid-template-columns: repeat(var(--num-cols), 1fr);
@@ -193,67 +210,52 @@ p {
   position: absolute;
   margin-top: -10%;
   z-index: 100;
-  background-color: aqua;
+  background-color: var(--very-black);
   padding: 5px;
 }
 
 .text2 {
   position: absolute;
-  margin-top: -6.5%;
+  margin-top: -20%;
   z-index: 100;
-  background-color: aqua;
+  background-color: var(--very-black);
   padding: 5px;
 }
+
+.text1 > h3 {
+  color: var(--white);
+}
+.text1 > p {
+  color: var(--white);
+}
+.text2 > h3 {
+  color: var(--white);
+}
+.text2 > p {
+  color: var(--white);
+}
+
+/* footer */
 
 .footer {
   display: grid;
   grid-column: 3 / span 6;
-  grid-row: 1;
+  grid-row: 3;
   align-items: flex-end;
   justify-content: center;
   word-spacing: 15px;
   margin-bottom: -40px;
 }
 
+#contact1 {
+  grid-column-start: 1;
+}
+
 #hi {
   color: var(--black);
 }
 
-@media screen and (max-width: 850px) {
-  .main-nav {
-    grid-column: 4 / span 5;
-  }
-  .image-grid {
-    --num-cols: 2;
-    --row-height: 150px;
-    background-color: blueviolet;
-  }
-
-  .image-grid :nth-child(1) {
-    grid-column: auto / span 2;
-    grid-row: auto / span 2;
-  }
-
-  .image-grid :nth-child(2) {
-    grid-column: auto / span 1;
-    grid-row: auto / span 1;
-  }
-
-  .image-grid :nth-child(3) {
-    grid-column: auto / span 1;
-    grid-row: auto / span 1;
-  }
-
-  .image-grid :nth-child(4) {
-    grid-column: auto / span 1;
-    grid-row: auto / span 1;
-  }
-
-  .image-grid :nth-child(5) {
-    grid-column: auto / span 1;
-    grid-row: auto / span 1;
-  }
-}
+/* Adjustments of headings to left*/
 
 .page-section {
   margin-left: auto;
@@ -267,6 +269,8 @@ p {
   margin-top: 630px;
 }
 
+/*image text*/
+
 .text2 {
   margin-top: -9%;
   width: 14%;
@@ -279,7 +283,24 @@ p {
   font-size: 13px;
 }
 
-@media screen and (max-width: 769px) {
+/* Screen size under 1024px */
+
+@media screen and (max-width: 1024px) {
+  .page-section {
+    grid-column: 1;
+  }
+
+  .text1 {
+    margin-top: -200px;
+  }
+
+  .text2 {
+    margin-top: -150px;
+  }
+}
+/*Screen size under 768px */
+
+@media screen and (max-width: 768px) {
   header {
     grid-template-columns: repeat(9, 1fr);
     margin-top: -2%;
@@ -317,6 +338,11 @@ p {
   .content > p {
     text-align: center;
   }
+
+  .new-grid {
+    grid-column: 2 / span 6;
+    margin-top: 200px;
+  }
   .image-grid {
     --num-cols: 1;
     --row-height: 300px;
@@ -348,10 +374,10 @@ p {
     grid-row: auto / span 1;
   }
   .text1 {
-    margin-top: -12%;
+    margin-top: -20%;
   }
   .text2 {
-    margin-top: -10%;
+    margin-top: -20%;
     width: 20%;
   }
 
@@ -371,5 +397,29 @@ p {
     grid-column: 1 / span 8;
     padding: 0%;
     margin-left: -2%;
+  }
+}
+
+/* Screen size very small (up to 590px)*/
+
+@media screen and (max-width: 590px) {
+  .main-nav {
+    grid-column: 3 / span 6;
+    margin-left: -11%;
+  }
+
+  .new-grid {
+    margin-top: 100px;
+  }
+  .text1 {
+    margin-top: -200px;
+  }
+  .text2 {
+    margin-top: -200px;
+  }
+
+  .footer {
+    grid-column: 1 / span 9;
+    font-size: 15px;
   }
 }
