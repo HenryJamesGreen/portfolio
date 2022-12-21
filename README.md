@@ -12,6 +12,8 @@ N/A
 
 ## Usage
 
+https://henryjamesgreen.github.io/portfolio/
+
 The website can be used to access information about me, my work experience and my working portfolio.
 
 ## Credits
